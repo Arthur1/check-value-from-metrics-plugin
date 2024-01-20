@@ -1,0 +1,14 @@
+builds:
+  - binary: check-value-from-metrics-plugin
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+archives:
+  - format: zip
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+release:
+  github:
+    owner: Arthur1
+    name: check-value-from-metrics-plugin
