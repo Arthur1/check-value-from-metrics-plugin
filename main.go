@@ -31,7 +31,7 @@ func main() {
 	flag.Float64Var(&opt.gt, "gt", math.NaN(), "set condition: [target value] > [option value]")
 	flag.Float64Var(&opt.lt, "lt", math.NaN(), "set condition: [target value] < [option value]")
 	flag.BoolVar(&opt.warning, "warning", false, "create CRITICAL alert when target value meets condition")
-	flag.BoolVar(&opt.critical, "critical", true, "create WARNING alert when target value meets condition")
+	flag.BoolVar(&opt.critical, "critical", false, "create WARNING alert when target value meets condition (default true) ")
 	flag.StringVar(&opt.name, "name", "check-value-from-metrics-plugin", "checker name for report")
 	flag.Parse()
 
